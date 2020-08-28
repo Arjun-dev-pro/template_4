@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogen</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Blogen</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target:="#show_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="show_nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="post.html" class="nav-link">Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category.html" class="nav-link">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="user.html" class="nav-link">Users</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown ml-auto">
+                        <a href="#" class="nav-link dropdown-toggle" id="drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> Welcome Brad</a>
+                        <div class="dropdown-menu" aria-labelledby="drop">
+                            <a href="profile.html" class="dropdown-item"><i class="fas fa-user-circle"></i> Profile</a>
+                            <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="logout.html" class="nav-link"><i class="fas fa-user-slash"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <section id="heading" class="bg-primary text-white py-2">
+        <div class="container">
+            <h1 class="display1">
+                <i class="fas fa-cog"></i> Post One
+            </h1>
+        </div>
+    </section>
+
+    <section id="button_section" class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="index.html" class="btn btn-light btn-block"><i class="fas fa-arrow-left"></i> Back to DashBoard</a>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a href="index.html" class="btn btn-success btn-block"><i class="fas fa-check"></i> Save Changes</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form-section" class="py-3">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Edit Settings</h3>
+                </div>
+                <div class="card-body">
+                    <p style="font-size: x-large;">Allow User Registration</p>
+                    <div class="form-check">
+                        <input type="radio" name="" id="sdf" class="form-check-input">
+                        <label for="sdf" class="form-check-label">Yes</label>
+
+                    </div>
+                    <div class="form-check">
+
+                        <input type="radio" name="" id="ggg" class="form-check-input">
+                        <label for="ggg" class="form-check-label">NO</label>
+                    </div>
+                    <p style="font-size: x-large;">Home Page Format</p>
+                    <div class="form-check">
+                        <input type="radio" name="" id="sdf" class="form-check-input">
+                        <label for="sdf" class="form-check-label">Blog page</label>
+
+                    </div>
+                    <div class="form-check">
+
+                        <input type="radio" name="" id="ggg" class="form-check-input">
+                        <label for="ggg" class="form-check-label">Home page</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="bg-dark py-5 text-white text-center">
+        <div class="container">
+            <p class="lead">Copyright <i class="fas fa-copyright"></i> 2020 Blogen</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/70dba2dbf8.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor 4
+        // instance, using default configuration.
+        CKEDITOR.replace('editor1');
+    </script>
+</body>
+
+</html>

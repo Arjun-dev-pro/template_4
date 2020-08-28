@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogen</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Blogen</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target:="#show_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="show_nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="post.html" class="nav-link">Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="category.html" class="nav-link">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="user.html" class="nav-link">Users</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown ml-auto">
+                        <a href="#" class="nav-link dropdown-toggle" id="drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> Welcome Brad</a>
+                        <div class="dropdown-menu" aria-labelledby="drop">
+                            <a href="profile.html" class="dropdown-item"><i class="fas fa-user-circle"></i> Profile</a>
+                            <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="logout.html" class="nav-link"><i class="fas fa-user-slash"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <section id="heading" class="bg-primary text-white py-2">
+        <div class="container">
+            <h1 class="display1">
+                <i class="fas fa-cog"></i> Dashboard
+            </h1>
+        </div>
+    </section>
+
+    <section id="button_section" class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#post_modal"><i class="fas fa-plus"></i> Add Post</button>
+                        </div>
+                        <div class="modal fade" id="post_modal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-primary">
+                                        <h4 class="text-white">Add Post</h4>
+                                        <button class="close" data-dismiss="modal">
+                                            <span>&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="title">Title</label>
+                                            <input type="text" name="title" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="dropdown">Category</label>
+                                            <select name="dropdown" id="" class="form-control">
+                                                <option value="">Web development</option>
+                                                <option value="">Tech gagets</option>
+                                                <option value="">Business</option>
+                                                <option value="">Health & Wellness</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="">Upload file</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                                <small class="text-muted">max 3mb</small>
+                                            </div>
+                                        </div>
+                                        <textarea name="editor1" id="editor1" rows="10" cols="80">
+                                            
+                                        </textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button data-dismiss="modal" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button data-toggle="modal" data-target="#modal_category" class="btn btn-success btn-block"><i class="fas fa-plus"></i> Add Category</button>
+                        </div>
+                        <div class="modal fade" id="modal_category">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-success">
+                                        <h4>Add Category</h4>
+                                        <button class="close" data-dismiss="modal">
+                                            <span>&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="">Title</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button data-dismiss="modal" class="btn btn-success">Save Changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button data-toggle="modal" data-target="#modal_user" class="btn btn-warning btn-block"><i class="fas fa-plus"></i> Add User</button>
+                        </div>
+                        <div class="modal fade" id="modal_user">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-warning">
+                                        <h4>Add User</h4>
+                                        <button class="close" data-dismiss="modal">
+                                            <span>&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="">Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Email</label>
+                                            <input type="email" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Password</label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Confirm password</label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button data-dismiss="modal" class="btn btn-warning">Save Changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="table_section" class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Latest Post</h2>
+                        </div>
+                        <div class="card-body p-0">
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="col">1</td>
+                                        <td scope="col">Post one</td>
+                                        <td scope="col">Web development</td>
+                                        <td scope="col">jan 28 2020</td>
+                                        <td scope="col"><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-left"></i> Details</a></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td scope="col">1</td>
+                                        <td scope="col">Post one</td>
+                                        <td scope="col">Web development</td>
+                                        <td scope="col">jan 28 2020</td>
+                                        <td scope="col"><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-left"></i> Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="col">1</td>
+                                        <td scope="col">Post one</td>
+                                        <td scope="col">Web development</td>
+                                        <td scope="col">jan 28 2020</td>
+                                        <td scope="col"><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-left"></i> Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="col">1</td>
+                                        <td scope="col">Post one</td>
+                                        <td scope="col">Web development</td>
+                                        <td scope="col">jan 28 2020</td>
+                                        <td scope="col"><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-left"></i> Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="col">1</td>
+                                        <td scope="col">Post one</td>
+                                        <td scope="col">Web development</td>
+                                        <td scope="col">jan 28 2020</td>
+                                        <td scope="col"><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-left"></i> Details</a> </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="col">1</td>
+                                        <td scope="col">Post one</td>
+                                        <td scope="col">Web development</td>
+                                        <td scope="col">jan 28 2020</td>
+                                        <td scope="col"><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-left"></i> Details</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row text-white">
+                        <div class="col-md-12  text-center mb-2">
+                            <div class="card-body bg-primary py-3 rounded">
+                                <h2 class="p-0 m-0">Posts</h2>
+                                <h1 class="display-4 "><i class="fas fa-pencil-alt"></i> 6</h2>
+                                    <a href="post.html" class="btn btn-outline-light py-1 m-0">view</a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12  text-center mb-2">
+                            <div class="card-body bg-success py-3 rounded">
+                                <h2 class="p-0 m-0">Categories</h2>
+                                <h1 class="display-4 "><i class="fas fa-folder"></i> 6</h2>
+                                    <a href="category.html" class="btn btn-outline-light py-1 m-0">view</a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12  text-center mb-2">
+                            <div class="card-body bg-warning py-3 rounded">
+                                <h2 class="p-0 m-0">Users</h2>
+                                <h1 class="display-4 "><i class="fas fa-users"></i> 6</h2>
+                                    <a href="user.html" class="btn btn-outline-light py-1 m-0">view</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="bg-dark py-5 text-white text-center">
+        <div class="container">
+            <p class="lead">Copyright <i class="fas fa-copyright"></i> 2020 Blogen</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/70dba2dbf8.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor 4
+        // instance, using default configuration.
+        CKEDITOR.replace('editor1');
+    </script>
+</body>
+
+</html>
